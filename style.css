@@ -10,22 +10,9 @@
     --border-radius: 16px;
     --box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     --transition-speed: 0.3s;
+    --color-scheme: dark light;
 }
 
-:root {
-    --background: #fff;
-    --background-card: #fff;
-    --background-items: #d7d2d2;
-    --text: #424242;
-    --title: #2d2d2d;
-    --background-dark: #121212;
-    --card-dark: #1e1e1e;
-    --dark-items: #333;
-    --text-light: #fff;
-    --title-light: #f1f1f1;
-}
-
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -42,7 +29,6 @@ body {
     color: #333;
 }
 
-/* Main Container */
 main {
     width: 100%;
     max-width: 380px;
@@ -55,7 +41,6 @@ main {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Form */
 #weatherForm {
     display: flex;
     border-radius: var(--border-radius);
@@ -87,7 +72,6 @@ main {
     transform: scale(1.1);
 }
 
-/* Weather Results */
 .weather-header {
     display: flex;
     flex-direction: column;
@@ -135,7 +119,6 @@ main {
     color: #555;
 }
 
-/* Weather Details */
 .weather-details {
     list-style: none;
     display: grid;
@@ -172,7 +155,6 @@ main {
 .pressure { background-color: var(--accent-purple); }
 .wind { background-color: var(--accent-green); }
 
-/* Error Effects */
 @keyframes shake {
     0%, 100% { transform: translateX(0); }
     20%, 60% { transform: translateX(-5px); }
@@ -183,7 +165,6 @@ main.error {
     animation: shake 0.5s linear 1;
 }
 
-/* Responsiveness */
 @media (max-width: 480px) {
     .weather-details {
         grid-template-columns: 1fr;
