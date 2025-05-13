@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Real-time weather app" />
+  <title>WeatherNow</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <form id="weatherForm" role="search" aria-label="Search by city">
+      <input
+        type="text"
+        id="cityInput"
+        autocomplete="off"
+        placeholder="Search for city..."
+        aria-label="Enter city name"
+      />
+      <button type="submit" aria-label="Search weather">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </button>
+    </form>
+
+    <section class="weather-result" aria-live="polite">
+      <div class="weather-header">
+        <figure class="city-info">
+          <img id="countryFlag" src="https://flagcdn.com/32x24/br.png" alt="Country flag" />
+          <figcaption id="cityName">São Paulo</figcaption>
+        </figure>
+
+        <figure class="temperature-info">
+          <img id="weatherIcon" src="https://cdn.weatherapi.com/weather/128x128/day/113.png" alt="Weather icon" />
+          <figcaption>
+            <span id="temperatureValue">23</span><sup>°C</sup>
+          </figcaption>
+        </figure>
+      </div>
+
+      <p id="weatherDescription" class="weather-description">Sunny</p>
+
+      <ul class="weather-details">
+        <li class="weather-detail humidity">
+          <span>Humidity</span>
+          <i class="fa-solid fa-droplet"></i>
+          <span id="humidityValue">65</span><span>%</span>
+        </li>
+        <li class="weather-detail pressure">
+          <span>Pressure</span>
+          <i class="fa-solid fa-gauge"></i>
+          <span id="pressureValue">1012</span><span>hPa</span>
+        </li>
+        <li class="weather-detail wind">
+          <span>Wind</span>
+          <i class="fa-solid fa-wind"></i>
+          <span id="windValue">10</span><span>km/h</span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
